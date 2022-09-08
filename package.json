@@ -1,0 +1,23 @@
+{
+  "name": "becrowd-uri-online-judge-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ananopaisdojavascript/becrowd-uri-online-judge-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ananopaisdojavascript/becrowd-uri-online-judge-javascript/issues"
+  },
+  "homepage": "https://github.com/ananopaisdojavascript/becrowd-uri-online-judge-javascript#readme",
+  "devDependencies": {
+    "jest": "^29.0.2"
+  }
+}
