@@ -1,35 +1,17 @@
-// const input = require('fs').readFileSync('../stdin', 'utf8');
-// const lines = input.split('\n');
+const input = require('fs').readFileSync('../stdin', 'utf8');
+const lines = input.split('\n');
 
-// console.log(input)
-// const sum = (a, b, c) => a + b + c;
+const getSum = (a, b, c) => a + b + c;
+const convertStrToNum = (str, a, b) => {
+    return Number(str.slice(a, b).replace(/[a-zA-Z ]/g, ''));
+}
 
-// const cases = lines.shift();
-// console.log(cases)
-// console.log(lines)
+const N = Number(lines.shift());
 
-// for (let i = 0; i < cases; i++) {
-//   const strToNum = lines[i].replace(/[a-zA-Z ]/g, '')
-//   const num1 = Number(strToNum.slice(0, 2));
-//   const num2 = Number(strToNum.slice(2, 5));
-//   const num3 = Number(strToNum.slice(5));
-//   console.log(num1)
-// }
-
-
-// const sum = (a, b, c) => a + b + c;
-// const cases = lines.length;
-// console.log(cases)
-
-// for (let i = 0; i < cases; i++) {
-//   const strToNum = lines[i].replace(/[a-zA-Z ]/g, '')
-//   console.log(strToNum)
-// }
-
-const str1 = 'Ab23s249ttux2';
-const str2 = 'Abx3s249ttu2x';
-const str3 = 'Ab23s23xttu21';
-
-console.log(str1.replace(/[a-zA-Z ]/g, ''))
-console.log(str2.replace(/[a-zA-Z ]/g, ''))
-console.log(str3.replace(/[a-zA-Z ]/g, ''))
+for(let i = 0; i < N; i++) {
+    const A = convertStrToNum(lines[i], 2, 4);
+    const B = convertStrToNum(lines[i], 5, 8);
+    const C = convertStrToNum(lines[i], 11);
+    const soma = getSum(A, B, C)
+    console.log(soma)
+}
