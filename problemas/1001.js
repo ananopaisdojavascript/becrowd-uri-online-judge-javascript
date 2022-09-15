@@ -1,6 +1,10 @@
-const lines = prompt("Digite os valores de entrada").split(" ");
+const input = require('fs').readFileSync('../stdin', 'utf8');
+const lines = input.split('\n');
 
-const [ A, B ] = lines.map(Number);
-const X = A + B;
+const sum = (a, b) => a + b;
 
-console.log(`X = ${X}`)
+const [A, B] = lines.map(number => Number(number));
+
+const soma = sum(A, B)
+
+console.log(`X = ${soma}`)
